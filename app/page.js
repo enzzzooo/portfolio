@@ -12,7 +12,7 @@ export default function Home() {
           <h2 className={s.h2Title}>My website is grand</h2>
         </div>
         <div className={s.imageWrapper}>
-          <Image className={s.imageTitle} src={car}></Image>
+          <Image className={s.imageTitle} src={car} priority></Image>
         </div>
       </section>
     </main>
