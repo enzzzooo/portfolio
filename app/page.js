@@ -1,6 +1,7 @@
 import s from "./page.module.css";
 import { gt_america } from "./lib/font";
 import Image from "next/image";
+import car from "../public/car.jpeg";
 export default function Home() {
   // home is descriptive to programmer; can also be page or another word
   return (
@@ -11,7 +12,7 @@ export default function Home() {
           <h2 className={s.h2Title}>My website is grand</h2>
         </div>
         <div className={s.imageWrapper}>
-          <Image src={}></Image>
+          <Image className={s.imageTitle} src={car}></Image>
         </div>
       </section>
     </main>

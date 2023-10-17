@@ -1,5 +1,5 @@
 .section1 {
-  height: 100vh;
+  height: 200vh;
   background: linear-gradient(#e61c5d, #3a0088);
 }
 .textWrapper {
@@ -14,4 +14,13 @@
 .h2Title {
   font-weight: 800;
   font-size: 1.5rem;
+}
+.imageWrapper {
+  position: relative;
+  top: 10%;
+  left: 60vw;
+}
+.imageTitle {
+  width: 30vw;
+  height: auto;
 }
