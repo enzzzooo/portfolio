@@ -24,7 +24,6 @@
   transition: 0.12s linear;
 }
 .logo:hover {
-  color: var(--red)
   color: white;
 }
 
