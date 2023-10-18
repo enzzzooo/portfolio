@@ -1,23 +1,25 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap/dist/gsap";
 import Link from "next/link";
 
-export default function IndexPage() {
-  const boxRef = useRef();
+export default function i() {
+  const root = useRef();
 
-  useEffect(() => {
-    gsap.to(boxRef.current, { rotation: "+=360" });
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(".box", { rotation: "+=360" });
+    }, root);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <div className="page">
-      <h1>About Page</h1>
-      <div className="box" ref={boxRef}>
-        About
-      </div>
+    <div className="page" ref={root}>
+      <h1>Home Page</h1>
+      <div className="box">Home</div>
       <p>
-        <Link href="../i">Back home</Link>
+        <Link href="../about">About Page</Link>
       </p>
 
       <style jsx global>{`
