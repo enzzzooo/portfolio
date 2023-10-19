@@ -16,10 +16,7 @@ export default function Home() {
           <Image className={s.imageTitle} src={car} priority></Image>
         </div>
       </section>
-      <section className={s.section2}>
-        <div style={{ width: 200, height: 200 }}>hi</div>
-        <Star></Star>
-      </section>
+      <section className={s.section2}></section>
     </main>
   );
 }

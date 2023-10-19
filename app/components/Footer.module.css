@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: column; /* switches flex components*/
+  justify-content: flex-start; /* top/bottom */
+  align-items: center; /* left/right */
+  color: blueviolet;
+  width: auto;
+  height: 50vh;
+}

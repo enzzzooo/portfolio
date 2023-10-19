@@ -1,7 +1,7 @@
 import "./globals.css";
 import { inter } from "./lib/font";
 import Nav from "./components/Nav";
-
+import Footer from "./components/Footer";
 export const metadata = {
   title: "gli't bow",
   description: "Created by me",
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Nav></Nav>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

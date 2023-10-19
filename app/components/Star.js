@@ -117,7 +117,7 @@ export default function Star({
 
   return (
     <div>
-      <canvas className="canvas" ref={canvasRef} />
+      <canvas className={s.canvas} ref={canvasRef} />
     </div>
   );
 }
