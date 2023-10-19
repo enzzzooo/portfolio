@@ -3,6 +3,16 @@ import { gsap } from "gsap/dist/gsap";
 import { useEffect, useRef } from "react";
 import s from "./Star.module.css";
 // check for typos, mishappens often and underlines it doesnt'
+/**
+ * A component that renders a starry background with interactive stars.
+ * @param {Object} props - The component props.
+ * @param {number} [props.densityRatio=0.5] - The ratio of stars to the viewport size.
+ * @param {number} [props.sizeLimit=5] - The maximum size of a star.
+ * @param {number} [props.defaultAlpha=0.2] - The default opacity of a star.
+ * @param {number} [props.scaleLimit=2] - The maximum scale of a star.
+ * @param {number} [props.proximityRatio=0.1] - The ratio of stars that are affected by pointer proximity.
+ * @returns {JSX.Element} - The rendered component.
+ */
 export default function Star({
   densityRatio = 0.5,
   sizeLimit = 5,
@@ -19,6 +29,10 @@ export default function Star({
 
   useEffect(() => {
     contextRef.current = canvasRef.current.getContext("2d");
+
+    /**
+     * Initializes the component.
+     */
     const LOAD = () => {
       vminRef.current = Math.min(window.innerHeight, window.innerWidth);
       const STAR_COUNT = Math.floor(vminRef.current * densityRatio);
@@ -34,6 +48,7 @@ export default function Star({
         1,
         defaultAlpha
       );
+      // Window size
       canvasRef.current.width = window.innerWidth;
       canvasRef.current.height = window.innerHeight;
       starsRef.current = new Array(STAR_COUNT).fill().map(() => ({
@@ -44,6 +59,10 @@ export default function Star({
         alpha: gsap.utils.random(0.1, defaultAlpha, 0.1),
       }));
     };
+
+    /**
+     * Renders the stars on the canvas.
+     */
     const RENDER = () => {
       contextRef.current.clearRect(
         0,
@@ -58,6 +77,13 @@ export default function Star({
         contextRef.current.fill();
       });
     };
+
+    /**
+     * Updates the stars based on pointer proximity.
+     * @param {Object} event - The pointermove event.
+     * @param {number} event.x - The x-coordinate of the pointer.
+     * @param {number} event.y - The y-coordinate of the pointer.
+     */
     const UPDATE = ({ x, y }) => {
       starsRef.current.forEach((STAR) => {
         const DISTANCE = Math.sqrt(
@@ -73,18 +99,22 @@ export default function Star({
         });
       });
     };
+
     LOAD();
     gsap.ticker.fps(24);
     gsap.ticker.add(RENDER);
+
     // Event handling
     window.addEventListener("resize", LOAD);
     document.addEventListener("pointermove", UPDATE);
+
     return () => {
       window.removeEventListener("resize", LOAD);
       document.removeEventListener("pointermove", UPDATE);
       gsap.ticker.remove(RENDER);
     };
   }, []); // why brackets?
+
   return (
     <div>
       <canvas className="canvas" ref={canvasRef} />
