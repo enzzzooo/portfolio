@@ -17,7 +17,7 @@ export default function Home() {
         </div>
       </section>
       <section className={s.section2}>
-        <div>hi</div>
+        <div style={{ width: 200, height: 200 }}>hi</div>
         <Star></Star>
       </section>
     </main>

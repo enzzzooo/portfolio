@@ -1,22 +1,39 @@
 "use client";
-import { useEffect, useRef } from "react";
 import { gsap } from "gsap/dist/gsap";
+import { useEffect, useRef } from "react";
 import s from "./Star.module.css";
-
+// check for typos, mishappens often and underlines it doesnt'
 export default function Star({
   densityRatio = 0.5,
   sizeLimit = 5,
-  defaultAlpha = 0.5,
+  defaultAlpha = 0.2,
+  scaleLimit = 2,
+  proximityRatio = 0.1,
 }) {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const starsRef = useRef(null);
+  const vminRef = useRef(null);
+  const scaleMapperRef = useRef(null);
+  const alphaMapperRef = useRef(null);
 
   useEffect(() => {
     contextRef.current = canvasRef.current.getContext("2d");
     const LOAD = () => {
-      const VMIN = Math.min(window.innerHeight, window.innerWidth);
-      const STAR_COUNT = Math.floor(VMIN * densityRatio);
+      vminRef.current = Math.min(window.innerHeight, window.innerWidth);
+      const STAR_COUNT = Math.floor(vminRef.current * densityRatio);
+      scaleMapperRef.current = gsap.utils.mapRange(
+        0,
+        vminRef.current * proximityRatio,
+        scaleLimit,
+        1
+      );
+      alphaMapperRef.current = gsap.utils.mapRange(
+        0,
+        vminRef.current * proximityRatio,
+        1,
+        defaultAlpha
+      );
       canvasRef.current.width = window.innerWidth;
       canvasRef.current.height = window.innerHeight;
       starsRef.current = new Array(STAR_COUNT).fill().map(() => ({
@@ -41,14 +58,36 @@ export default function Star({
         contextRef.current.fill();
       });
     };
-    starsRef.current.forEach((star) => {
-      contextRef.current.filStyle = `hsla(0,100%, 100%, ${star.alpha})`;
-      contextRef.current.beginPath();
-      contextRef.current.arc(star.x, star.y, star.size / 2, 0, Math.PI * 2);
-      contextRef.current.fill();
-    });
-
-    contextRef.current.fill();
+    const UPDATE = ({ x, y }) => {
+      starsRef.current.forEach((STAR) => {
+        const DISTANCE = Math.sqrt(
+          Math.pow(STAR.x - x, 2) + Math.pow(STAR.y - y, 2)
+        );
+        gsap.to(STAR, {
+          scale: scaleMapperRef.current(
+            Math.min(DISTANCE, vminRef.current * proximityRatio)
+          ),
+          alpha: alphaMapperRef.current(
+            Math.min(DISTANCE, vminRef.current * proximityRatio)
+          ),
+        });
+      });
+    };
+    LOAD();
+    gsap.ticker.fps(24);
+    gsap.ticker.add(RENDER);
+    // Event handling
+    window.addEventListener("resize", LOAD);
+    document.addEventListener("pointermove", UPDATE);
+    return () => {
+      window.removeEventListener("resize", LOAD);
+      document.removeEventListener("pointermove", UPDATE);
+      gsap.ticker.remove(RENDER);
+    };
   }, []); // why brackets?
-  return <canavs className={s.canvas} ref={canvasRef} />;
+  return (
+    <div>
+      <canvas className="canvas" ref={canvasRef} />
+    </div>
+  );
 }

@@ -29,7 +29,7 @@ a {
   min-height: 100vh;
   overflow: hidden;
 }
-.re {
+.canvas {
   position: fixed;
   inset: 0;
   background: hsl(0, 0%, 15%);
