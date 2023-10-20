@@ -8,10 +8,10 @@ export default function Footer() {
       <h2>Rarw</h2>
       <ul>
         <li>
-          <Link href="../Portfolio/page">Portfolio</Link>
+          <Link href="../portfolio">Portfolio</Link>
         </li>
         <li>
-          <Link href="../about/page">About</Link>
+          <Link href="../about">About</Link>
         </li>
         <li>Copyright @ 2023</li>
       </ul>
