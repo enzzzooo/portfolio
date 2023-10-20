@@ -1,11 +1,13 @@
 :root {
   --red: #e61c5d;
   --blue: #3a0088;
-  --purple: #930077;
+  --purple: #824179;
   --yellow: #ffe98a;
   --pink: #f1a2c8;
 
-  --gradient1: linear-gradient(#e61c5d #ffffff);
+  --gradientRW: linear-gradient(var(--red), white);
+
+  --gradientRP: linear-gradient(var(--red), var(--blue));
 }
 * {
   box-sizing: border-box;
@@ -25,4 +27,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+li {
+  list-style-type: none;
 }

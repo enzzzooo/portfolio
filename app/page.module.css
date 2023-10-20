@@ -1,6 +1,6 @@
 .section1 {
   height: 200vh;
-  background: linear-gradient(#e61c5d, #3a0088);
+  background: var(--gradientRP);
 }
 .textWrapper {
   position: relative;
