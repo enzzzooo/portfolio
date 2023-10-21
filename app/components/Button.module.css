@@ -1,6 +1,6 @@
 .button {
   box-shadow: -20px 0px 80px teal;
 }
-.button {
+.button:hover {
   background-color: grey;
 }

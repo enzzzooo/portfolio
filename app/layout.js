@@ -1,5 +1,6 @@
 import "./globals.css";
 import { inter } from "./lib/font";
+import s from "./layout.module.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 export const metadata = {

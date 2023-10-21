@@ -1,4 +1,4 @@
-import s from "./Button.module.css";
-export default function Button() {
-  return <button className={s.button}>button</button>;
+import s from "./button.module.css";
+export default function button() {
+  return <div className={s.button}></div>;
 }

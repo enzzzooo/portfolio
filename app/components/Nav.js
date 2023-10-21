@@ -1,6 +1,5 @@
 import Link from "next/link";
 import s from "./Nav.module.css";
-
 export default function Header() {
   // css classnames are CaSeSeNsItIvE
   return (
@@ -14,7 +13,7 @@ export default function Header() {
             <Link href="/about">About</Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="../portfolio">Portfolio</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>

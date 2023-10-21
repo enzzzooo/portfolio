@@ -6,8 +6,9 @@
   --pink: #f1a2c8;
 
   --gradientRW: linear-gradient(var(--red), white);
-
   --gradientRP: linear-gradient(var(--red), var(--blue));
+
+  --headerHeight: 5rem;
 }
 * {
   box-sizing: border-box;
@@ -18,7 +19,7 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
