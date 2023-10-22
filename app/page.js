@@ -1,6 +1,5 @@
 import s from "./page.module.css";
 import { gt_america } from "./lib/font";
-import Star from "./components/Star";
 import Image from "next/image";
 import car from "../public/car.jpeg";
 export default function Home() {

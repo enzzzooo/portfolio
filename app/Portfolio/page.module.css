@@ -1,5 +1,5 @@
 .t {
-  padding-top: 5rem;
+  padding-top: var(--headerHeight);
   background-color: blue;
   height: 150vh;
 }

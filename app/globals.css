@@ -1,9 +1,9 @@
 :root {
-  --red: #e61c5d;
-  --blue: #3a0088;
-  --purple: #824179;
-  --yellow: #ffe98a;
-  --pink: #f1a2c8;
+  --red: rgba(230, 28, 93, 1);
+  --blue: rgba(58, 0, 136, 1);
+  --purple: rgba(130, 65, 121, 1);
+  --yellow: rgba(255, 233, 138, 1);
+  --pink: rgba(241, 162, 200, 1);
 
   --gradientRW: linear-gradient(var(--red), white);
   --gradientRP: linear-gradient(var(--red), var(--blue));

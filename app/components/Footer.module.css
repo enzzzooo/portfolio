@@ -7,3 +7,6 @@
   width: auto;
   height: 50vh;
 }
+.lower {
+  color: var(--purple05);
+}

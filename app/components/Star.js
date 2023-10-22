@@ -14,11 +14,11 @@ import s from "./Star.module.css";
  * @returns {JSX.Element} - The rendered component.
  */
 export default function Star({
-  densityRatio = 0.5,
-  sizeLimit = 5,
-  defaultAlpha = 0.2,
-  scaleLimit = 2,
-  proximityRatio = 0.1,
+  densityRatio = 0.75,
+  sizeLimit = 3,
+  defaultAlpha = 0.25,
+  scaleLimit = 9,
+  proximityRatio = 0.095,
 }) {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
