@@ -15,8 +15,6 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  z-index: 10;
-  margin-bottom: 5rem;
 }
 .logo {
   font-size: 24px;
