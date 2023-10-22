@@ -1,6 +1,5 @@
-import s from "./page.module.css";
+import s from "../portfolio/page.module.css";
+import Star from "../components/Star";
 export default function page() {
-  return (
-      <div>portfolio</div>
-  );
+  return <section className={`top ${s.t}`}>Hi how's it going</section>;
 }
