@@ -2,8 +2,11 @@
   --red: rgb(230, 28, 93);
   --redO: 230, 28, 93;
 
-  --blue: rgb(58, 0 ,136);
+  --blue: rgb(58, 0, 136);
   --blueO: 58, 0, 136;
+
+  --lightBlue: rgb(65, 61, 209);
+  --lightBlueO: 65, 61, 209;
 
   --purple: rgb(130, 65, 121);
   --purpleO: 130, 65, 121;
@@ -40,4 +43,7 @@ a:hover {
 }
 li {
   list-style-type: none;
+}
+.top {
+  padding-top: var(--headerHeight);
 }

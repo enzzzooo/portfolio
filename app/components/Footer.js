@@ -6,16 +6,20 @@ export default function Footer() {
     <>
       <Star />
       <div className={s.wrapper}>
-        <h1 className={s.main}>Main</h1>
-        <h2>Rarw</h2>
+        <h1 className={s.big}>Main</h1>
+        <h2 className={s.big}>Rarw</h2>
         <ul>
           <li>
-            <Link href="../portfolio">Portfolio</Link>
+            <Link className={s.small} href="../portfolio">
+              Portfolio
+            </Link>
           </li>
           <li>
-            <Link href="../about">About</Link>
+            <Link className={s.small} href="../about">
+              About
+            </Link>
           </li>
-          <li className={s.lower}>Copyright &copy; 2023</li>
+          <li className={`${s.lower} ${s.small}`}>Copyright &copy; 2023</li>
         </ul>
       </div>
     </>

@@ -114,6 +114,7 @@ export default function Star({
       gsap.ticker.remove(RENDER);
     };
   }, []); // why brackets?
+  // empty array
 
   return (
     <div>

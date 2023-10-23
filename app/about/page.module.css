@@ -4,5 +4,6 @@
   justify-content: center;
 }
 .style {
-  background-color: blue;
+  color: blue;
+  height: 100vh;
 }
