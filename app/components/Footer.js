@@ -15,7 +15,7 @@ export default function Footer() {
           <li>
             <Link href="../about">About</Link>
           </li>
-          <li className={s.lower}>Copyright @ 2023</li>
+          <li className={s.lower}>Copyright &copy; 2023</li>
         </ul>
       </div>
     </>
