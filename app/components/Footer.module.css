@@ -22,5 +22,6 @@
 }
 
 .lower:hover {
+  cursor: default;
   color: rgba(var(--purpleO), 0.75);
 }

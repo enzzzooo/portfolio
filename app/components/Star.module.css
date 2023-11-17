@@ -1,5 +1,5 @@
 .canvas {
-  position: fixed;
+  position: relative;
   inset: 0;
   background: hsl(0, 0%, 15%);
   z-index: -1;

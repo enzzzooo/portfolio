@@ -116,9 +116,5 @@ export default function Star({
   }, []); // why brackets?
   // empty array
 
-  return (
-    <div>
-      <canvas className={s.canvas} ref={canvasRef} />
-    </div>
-  );
+  return <canvas className={s.canvas} ref={canvasRef} />;
 }

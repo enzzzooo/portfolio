@@ -1,0 +1,10 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--purple);
+  width: auto;
+  height: 50vh;
+  background-color: green;
+}

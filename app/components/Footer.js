@@ -4,7 +4,6 @@ import Star from "./Star";
 export default function Footer() {
   return (
     <>
-      <Star />
       <div className={s.wrapper}>
         <h1 className={s.big}>Main</h1>
         <h2 className={s.big}>Rarw</h2>
@@ -22,6 +21,7 @@ export default function Footer() {
           <li className={`${s.lower} ${s.small}`}>Copyright &copy; 2023</li>
         </ul>
       </div>
+      <Star />
     </>
   );
 }
