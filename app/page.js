@@ -5,7 +5,7 @@ import car from "../public/car.jpeg";
 export default function Home() {
   // home is descriptive to programmer; can also be page or another word
   return (
-    <main>
+    <>
       <section className={s.section1}>
         <div className={`${gt_america.className} ${s.textWrapper}`}>
           <h1 className={s.h1Title}>Website</h1>
@@ -16,6 +16,6 @@ export default function Home() {
         </div>
       </section>
       <section className={s.section2}></section>
-    </main>
+    </>
   );
 }
