@@ -21,7 +21,7 @@ export const gt_america = localFont({
       style: "normal",
     },
     {
-      path: "./GT-America-Expanded-Black-Trial.woff2",
+      path: "./GT-America-Black.woff2",
       weight: "900",
       style: "normal",
     },
