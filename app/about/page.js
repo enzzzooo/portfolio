@@ -1,8 +1,12 @@
+import { gt_america } from "../lib/font";
 import s from "./page.module.css";
 export default function about() {
   return (
-    <div className={s.center}>
-      <div className={s.style}>rarw and </div>
+    <div className={s.section1}>
+      <div className={`${gt_america.className} ${s.textWrapper}`}>
+        <h1 className={s.h1Title}>About Me</h1>
+        <h2 className={s.h2Title}>LowerH2</h2>
+      </div>
     </div>
   );
 }
