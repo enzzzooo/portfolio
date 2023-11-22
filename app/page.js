@@ -10,6 +10,7 @@ export default function Home() {
         <div className={`${gt_america.className} ${s.wrapperTitle}`}>
           <h1 className={s.h1Title}>Website</h1>
           <h2 className={s.h2Title}>My website is grand</h2>
+
           <Image className={s.imageTitle} src={car} alt={" "} priority></Image>
         </div>
       </section>
