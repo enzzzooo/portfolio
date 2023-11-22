@@ -2,16 +2,19 @@
   height: 200vh;
   background: var(--gradientRP);
 }
-.wrapperTitle {
+.TitleWrapper {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  row-gap: 50px;
+}
+.wrapperTitle {
+  display: flex;
+  flex-direction: column;
+  margin-right: clamp(10px, 10vw, 100px);
 }
 @media (width < 800px) {
-  .wrapperTitle {
+  .TitleWrapper {
     flex-direction: column;
   }
   .imageTitle {
@@ -26,17 +29,7 @@
 .h2Title {
   font-weight: 800;
 }
-@media (screen < 780px) {
-  .imageWrapper {
-    position: static;
-    display: block;
-  }
-  .textWrapper {
-    position: static;
-    display: block;
-  }
-}
 .imageTitle {
-  width: 30vw;
+  width: clamp(230px, 30vw, 400px);
   height: auto;
 }
