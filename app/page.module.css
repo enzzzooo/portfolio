@@ -12,14 +12,6 @@
   flex-direction: column;
   margin-right: clamp(10px, 10vw, 100px);
 }
-@media (width < 800px) {
-  .TitleWrapper {
-    flex-direction: column;
-  }
-  .imageTitle {
-    margin-top: 17px;
-  }
-}
 
 .h1Title {
   font-weight: 900;
@@ -28,7 +20,36 @@
 .h2Title {
   font-weight: 800;
 }
-.imageTitle {
+@media (width < 800px) {
+  .TitleWrapper {
+    flex-direction: column;
+  }
+  .imageMain,
+  .imageZoom {
+    margin-top: clamp(10px, 5vw + 1rem, 100px);
+    /* add margin to seperate words from image when 799px and under*/
+  }
+}
+
+/* image */
+.imageWrapper {
+  position: static;
+}
+/* on imageMain:hover, overflow hidden around for imageZoom*/
+.imageZoom {
+  position: absolute;
+  z-index: -1;
   width: clamp(230px, 30vw, 400px);
   height: auto;
+}
+.imageMain {
+  width: clamp(230px, 30vw, 400px);
+  position: relative;
+  z-index: 2;
+  height: auto;
+}
+.imageMain:hover .imageZoom {
+  transform: scale(2);
+  overflow: hidden;
+  z-index: 10;
 }

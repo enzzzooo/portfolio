@@ -4,6 +4,8 @@
   --med: clamp(2rem, 0.34vw + 0.91rem, 1.19rem);
   --small: clamp(1rem, 0.34vw + 0.8rem, 1rem);
 
+  --headerHeight: clamp(4rem, 5vw + 1rem, 5rem);
+
   --red: rgb(230, 28, 93);
   --redO: 230, 28, 93;
   --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
@@ -31,8 +33,6 @@
   --gradientRW: linear-gradient(var(--red), white);
   --gradientRP: linear-gradient(var(--red), var(--blue));
   --gradientIndex: linear-gradient(var(--red), rgb(133, 47, 115));
-
-  --headerHeight: 5rem;
 }
 * {
   box-sizing: border-box;
@@ -57,8 +57,8 @@ li {
   list-style-type: none;
 }
 h1 {
-  font-size: clamp(20px, 4rem + 3vw, 36px);
+  font-size: clamp(20px, 4rem + 3vw, 39px);
 }
 h2 {
-  font-size: clamp(16px, 3rem + 1vw, 30px);
+  font-size: clamp(16px, 2.5rem + 1vw, 32px);
 }
