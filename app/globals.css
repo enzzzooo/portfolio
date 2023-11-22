@@ -30,6 +30,7 @@
 
   --gradientRW: linear-gradient(var(--red), white);
   --gradientRP: linear-gradient(var(--red), var(--blue));
+  --gradientIndex: linear-gradient(var(--red), rgb(133, 47, 115));
 
   --headerHeight: 5rem;
 }

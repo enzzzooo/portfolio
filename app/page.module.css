@@ -1,6 +1,5 @@
 .section1 {
-  height: 200vh;
-  background: var(--gradientRP);
+  background: var(--gradientIndex);
 }
 .TitleWrapper {
   display: flex;
